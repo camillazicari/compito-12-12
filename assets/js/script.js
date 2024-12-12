@@ -91,4 +91,8 @@ function deleteCard(id) {
 btnSearch.addEventListener('click', (e) => {
   e.preventDefault;
   query = callGetPhotos(inputSearch.value);
+  col.forEach((col) => {
+    col.style.display = 'block';
+  })
+  inputSearch.value = '';
 })
