@@ -32,6 +32,7 @@ async function getPhotos() {
   }
 }
 
+
 async function callGetPhotos(newQuery) {
   query = newQuery;
   try {
@@ -73,7 +74,7 @@ function printImage(newQuery) {
     image.addEventListener('click', (e) => {
       e.preventDefault();
       let pagina2 = 'images.html';
-      let newUrl = `${pagina2}?${photos[i].id}`;
+      let newUrl = `${pagina2}?photoId=${photos[i].id}`;
       window.location.href = newUrl;
     })
   }
