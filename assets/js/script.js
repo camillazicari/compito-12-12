@@ -70,6 +70,12 @@ function printImage(newQuery) {
       e.preventDefault();
       deleteCard(col.id);
     });
+    image.addEventListener('click', (e) => {
+      e.preventDefault();
+      let pagina2 = 'images.html';
+      let newUrl = `${pagina2}?${photos[i].id}`;
+      window.location.href = newUrl;
+    })
   }
 }
 
